@@ -10,7 +10,8 @@
 # dependencies
 /node_modules
 /src/app/server/.env
-
+/src/app/server/node_modules
+/src/app/server/.gitignore
 # profiling files
 chrome-profiler-events*.json
 speed-measure-plugin*.json
