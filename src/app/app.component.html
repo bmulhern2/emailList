@@ -1,0 +1,26 @@
+<nav class="bg-dark">
+  <h1 class="text-center text-light">Users</h1>
+</nav>
+<table class="table text-center">
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody class="text-center" *ngFor="let User of Users">
+    <tr>
+      <td>{{ User.Email }}</td>
+      <td><button class="btn-success">Edit</button></td>
+      <td><button class="btn-danger" (click)="delete()">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
+<form [formGroup]="myForm" class="text-center" (ngSubmit)="onSubmit()">
+  <input class="text-center mt-1" type="text" name="Email" placeholder="Email" formControlName="Email" />
+  <br>
+  <input class="text-center mt-1" type="text" name="Password" placeholder="Password" formControlName="Password" />
+  <br>
+  <input class="mt-1" type="submit" />
+</form>
